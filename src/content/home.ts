@@ -27,13 +27,13 @@ export const homeContent = {
   identity: {
     name: 'Doug West',
     title: 'Lead Product Manager',
-    aboutHeading: 'About',
+    aboutHeading: '/ About',
     about: `I partner with ambitious teams to study customer behavior, reimagine products, and launch new businesses. My work is rooted in an understanding of user needs, business objectives, and the rapidly evolving possibilities of technology.`,
     email: { label: 'Email', href: 'mailto:hello@example.com' },
     linkedIn: { label: 'LinkedIn', href: 'https://www.linkedin.com' },
   } satisfies HomeIdentity,
   work: {
-    sectionHeading: 'Work',
+    sectionHeading: '/ Work',
     employers: [
       {
         id: 'mckinsey',
@@ -43,25 +43,49 @@ export const homeContent = {
             id: 'enterprise-ai',
             title: 'Enterprise AI Transformation',
             description:
+              'Led 0 to 1 AI product development and transformation initiatives across industries, translating emerging AI capabilities into real-world tools and decision systems',
+            detailsHref: '#',
+            imageSrc: '/images/mckinsey-logo.png',
+            imageAlt: 'McKinsey & Company logo',
+          },
+          {
+            id: 'automotive',
+            title: 'Top 3 Global Automotive OEM',
+            description:
+              'Redesigned the parts and accessories eCommerce experience for a global automotive OEM, improving product discovery, navigation, and conversion.',
+            detailsHref: '#',
+            imageSrc: '/images/mckinsey-logo.png',
+            imageAlt: 'McKinsey & Company logo',
+          },
+          {
+            id: 'medical',
+            title: 'Top 3 Medical Device Manufacturer',
+            description:
+              'Helped launch a new glucose monitoring business by designing the end-to-end DTC product experience.',
+            detailsHref: '#',
+            imageSrc: '/images/mckinsey-logo.png',
+            imageAlt: 'McKinsey & Company logo',
+          },
+        ],
+      },
+      {
+        id: 'captech',
+        name: 'CapTech',
+        projects: [
+          {
+            id: 'captech-placeholder-a',
+            title: 'Placeholder project one',
+            description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             detailsHref: '#',
             imageSrc: '/images/project-placeholder.svg',
             imageAlt: '',
           },
           {
-            id: 'automotive',
-            title: 'Top 3 Global Automotive OEM',
+            id: 'captech-placeholder-b',
+            title: 'Placeholder project two',
             description:
-              'Partnered with a leading global automotive company to modernize the aftermarket parts and accessories omnichanel experience',
-            detailsHref: '#',
-            imageSrc: '/images/project-placeholder.svg',
-            imageAlt: '',
-          },
-          {
-            id: 'medical',
-            title: 'Top 3 Medical Device Manufacturer',
-            description:
-              'Partnered with a global healthcare leader to stand up a completely new business focused on glucose monitoring',
+              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             detailsHref: '#',
             imageSrc: '/images/project-placeholder.svg',
             imageAlt: '',
@@ -69,19 +93,52 @@ export const homeContent = {
         ],
       },
       {
-        id: 'captech',
-        name: 'CapTech',
-        projects: [],
-      },
-      {
         id: 'team-one',
         name: 'Team One',
-        projects: [],
+        projects: [
+          {
+            id: 'team-one-placeholder-a',
+            title: 'Placeholder project one',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            detailsHref: '#',
+            imageSrc: '/images/project-placeholder.svg',
+            imageAlt: '',
+          },
+          {
+            id: 'team-one-placeholder-b',
+            title: 'Placeholder project two',
+            description:
+              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            detailsHref: '#',
+            imageSrc: '/images/project-placeholder.svg',
+            imageAlt: '',
+          },
+        ],
       },
       {
         id: 'other',
         name: 'Other',
-        projects: [],
+        projects: [
+          {
+            id: 'other-placeholder-a',
+            title: 'Placeholder project one',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            detailsHref: '#',
+            imageSrc: '/images/project-placeholder.svg',
+            imageAlt: '',
+          },
+          {
+            id: 'other-placeholder-b',
+            title: 'Placeholder project two',
+            description:
+              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            detailsHref: '#',
+            imageSrc: '/images/project-placeholder.svg',
+            imageAlt: '',
+          },
+        ],
       },
     ] satisfies HomeEmployer[],
   },

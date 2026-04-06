@@ -13,6 +13,7 @@
 
   --color-cream-100: var(--cream-100);
   --color-cream-500: var(--cream-500);
+  --color-cream-550: var(--cream-550);
   --color-cream-900: var(--cream-900);
   --color-cement-100: var(--cement-100);
   --color-cement-500: var(--cement-500);
@@ -26,6 +27,12 @@
   --spacing-tight: 0.5rem;
   /* Figma sidebar: gap between Email / LinkedIn */
   --spacing-cta-gap: 1rem;
+  /* Work accordion: between “no gap” and `section` */
+  --spacing-sunk: 0.75rem;
+  /* Between `block` (1.25rem) and `section` (1.5rem) */
+  --spacing-comfort: 1.375rem;
+  /* Between `section` (1.5rem) and `layout` (2.5rem) */
+  --spacing-loft: 2rem;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -65,6 +72,18 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Project card CTA arrow: smooth horizontal nudge (alternate = no loop seam) */
+  --animate-card-cta-arrow: card-cta-arrow 0.9s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+}
+
+@keyframes card-cta-arrow {
+  from {
+    transform: translate3d(-0.0625rem, 0, 0);
+  }
+  to {
+    transform: translate3d(0.1875rem, 0, 0);
+  }
 }
 
 /* ─── Figma variables + shadcn semantics (single source for app + shadcn/ui) ─── */
@@ -73,6 +92,7 @@
   --white: #ffffff;
   --cream-100: #faf9f5;
   --cream-500: #f5f4ee;
+  --cream-550: #ebeae3;
   --cream-900: #d1cfc6;
   --cement-100: #c0c0c0;
   --cement-500: #62615d;
@@ -117,6 +137,7 @@
 .dark {
   --background: var(--cream-100);
   --foreground: var(--black);
+  --cream-550: #ebeae3;
   --card: var(--cream-500);
   --card-foreground: var(--black);
   --popover: var(--cream-500);

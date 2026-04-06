@@ -33,14 +33,14 @@ export function WorkSection({
         className="w-full border-0 shadow-none"
       >
         {employers.map((employer) => (
-          <AccordionItem key={employer.id} value={employer.id} className="border-0">
+          <AccordionItem key={employer.id} value={employer.id}>
             <Separator className="mb-0 bg-cement-100" />
             <AccordionTrigger className="text-2xl font-semibold text-cement-500 hover:no-underline">
               <span className="pr-tight text-left">{employer.name}</span>
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="pt-sunk">
               {employer.projects.length > 0 ? (
-                <ul className="flex flex-col gap-block pb-section">
+                <ul className="flex flex-col gap-comfort pb-loft">
                   {employer.projects.map((project) => (
                     <li key={project.id}>
                       <ProjectCard project={project} />
