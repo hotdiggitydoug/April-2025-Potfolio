@@ -1,0 +1,11 @@
+---
+description: Enforce the portfolio design system (tokens + shadcn); avoid one-off styles.
+alwaysApply: true
+---
+
+# Portfolio design system
+
+- **Tokens**: All colors, spacing rhythm, and radii come from [src/app/globals.css](src/app/globals.css). Use Tailwind utilities mapped there (e.g. `cream-*`, `cement-*`, `layout` / `section` / `block` / `tight` spacing, and shadcn semantics like `background`, `foreground`, `primary`, `muted-foreground`, `card`, `border`).
+- **Components**: Prefer primitives in `src/components/ui/*` (shadcn). Build screens by composing those primitives in `src/components/layout/*`, `src/components/work/*`, or future feature folders—not ad-hoc HTML with random utility soup.
+- **No rogue styles**: Do not add raw hex/RGB in class names, arbitrary pixel spacing (`p-[37px]`), or inline `style={{}}` in feature components unless there is a documented exception. New Figma values should be added as CSS variables in `:root` / `@theme inline` first, then consumed via utilities.
+- **Content**: Keep copy and structured data in `src/content/*`; keep layout components mostly presentational.
