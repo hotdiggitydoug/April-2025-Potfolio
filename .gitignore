@@ -23,3 +23,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Raw / WIP image drops (copy finalized assets into e.g. case-studies/)
+/public/images/incoming/*
+!/public/images/incoming/.gitkeep
