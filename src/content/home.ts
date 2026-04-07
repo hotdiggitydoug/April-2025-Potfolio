@@ -16,6 +16,7 @@ export type HomeEmployer = {
 /** Left column only — Figma Frame 1191:133 has no portrait / photo. */
 export type HomeIdentity = {
   name: string
+  initials: string
   title: string
   aboutHeading: string
   about: string
@@ -26,6 +27,7 @@ export type HomeIdentity = {
 export const homeContent = {
   identity: {
     name: 'Doug West',
+    initials: 'DW',
     title: 'Lead Product Manager',
     aboutHeading: '/ About',
     about: `I partner with ambitious teams to study customer behavior, reimagine products, and launch new businesses. My work is rooted in an understanding of user needs, business objectives, and the rapidly evolving possibilities of technology.`,
@@ -44,7 +46,7 @@ export const homeContent = {
             title: 'Enterprise AI Transformation',
             description:
               'Led 0 to 1 AI product development and transformation initiatives across industries, translating emerging AI capabilities into real-world tools and decision systems',
-            detailsHref: '#',
+            detailsHref: '/work/enterprise-ai',
             imageSrc: '/images/mckinsey-logo.png',
             imageAlt: 'McKinsey & Company logo',
           },
@@ -53,7 +55,7 @@ export const homeContent = {
             title: 'Top 3 Global Automotive OEM',
             description:
               'Redesigned the parts and accessories eCommerce experience for a global automotive OEM, improving product discovery, navigation, and conversion.',
-            detailsHref: '#',
+            detailsHref: '/work/automotive',
             imageSrc: '/images/mckinsey-logo.png',
             imageAlt: 'McKinsey & Company logo',
           },
@@ -62,7 +64,7 @@ export const homeContent = {
             title: 'Top 3 Medical Device Manufacturer',
             description:
               'Helped launch a new glucose monitoring business by designing the end-to-end DTC product experience.',
-            detailsHref: '#',
+            detailsHref: '/work/medical',
             imageSrc: '/images/mckinsey-logo.png',
             imageAlt: 'McKinsey & Company logo',
           },

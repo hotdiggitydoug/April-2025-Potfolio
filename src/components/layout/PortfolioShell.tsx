@@ -11,7 +11,7 @@ type PortfolioShellProps = {
 
 export function PortfolioShell({ sidebar, children }: PortfolioShellProps) {
   return (
-    <div className="box-border min-h-svh w-full bg-cream-100 lg:h-full lg:min-h-0 lg:overflow-hidden">
+    <div className="box-border min-h-svh w-full bg-cream-100 lg:fixed lg:inset-0 lg:min-h-0 lg:overflow-hidden">
       <aside className="box-border flex min-h-svh flex-col items-stretch border-cement-100 p-layout lg:fixed lg:top-0 lg:bottom-0 lg:left-0 lg:z-20 lg:min-h-0 lg:w-1/3 lg:overflow-y-auto lg:overscroll-y-contain lg:border-r lg:border-solid">
         {sidebar}
       </aside>
@@ -30,7 +30,7 @@ export function SidebarIdentity({
   about,
   email,
   linkedIn,
-}: HomeIdentity) {
+}: Omit<HomeIdentity, 'initials'>) {
   return (
     <div className="flex min-h-0 w-full flex-1 flex-col justify-between gap-0">
       <header className="flex shrink-0 flex-col gap-tight">
