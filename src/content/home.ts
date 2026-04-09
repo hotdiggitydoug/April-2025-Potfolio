@@ -5,6 +5,14 @@ export type HomeProject = {
   detailsHref: string
   imageSrc?: string
   imageAlt?: string
+  /** How the logo fills the thumbnail; default cover */
+  imageThumbFit?: 'cover' | 'contain'
+  /** Optional classes on the thumbnail wrapper (e.g. bg-cream-900, padding) */
+  imageThumbTileClassName?: string
+  /** CSS object-position for raster logos (e.g. center 40%) */
+  imageThumbObjectPosition?: string
+  /** Tailwind scale class to zoom cropped logos (e.g. scale-[1.35]) */
+  imageThumbScaleClassName?: string
 }
 
 export type HomeEmployer = {
@@ -31,11 +39,19 @@ export const homeContent = {
     title: 'Lead Product Manager',
     aboutHeading: '/ About',
     about: `I partner with ambitious teams to study customer behavior, reimagine products, and launch new businesses. My work is rooted in an understanding of user needs, business objectives, and the rapidly evolving possibilities of technology.`,
-    email: { label: 'Email', href: 'mailto:hello@example.com' },
-    linkedIn: { label: 'LinkedIn', href: 'https://www.linkedin.com' },
+    email: {
+      label: 'Email',
+      href: 'mailto:wdwesthree@gmail.com?subject=Portfolio%20inquiry',
+    },
+    linkedIn: {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/dougwest3/',
+    },
   } satisfies HomeIdentity,
   work: {
     sectionHeading: '/ Work',
+    confidentialityNote:
+      'Due to client confidentiality agreements, select impact stories may use generalized client names and may omit supporting visual assets',
     employers: [
       {
         id: 'mckinsey',
@@ -45,7 +61,7 @@ export const homeContent = {
             id: 'enterprise-ai',
             title: 'Enterprise AI Transformation',
             description:
-              'Led 0 to 1 AI product development and transformation initiatives across industries, translating emerging AI capabilities into real-world tools and decision systems',
+              'Translating AI into tangible products, decision-making tools, and transformation strategies across industries.',
             detailsHref: '/work/enterprise-ai',
             imageSrc: '/images/mckinsey-logo.png',
             imageAlt: 'McKinsey & Company logo',
@@ -75,70 +91,35 @@ export const homeContent = {
         name: 'CapTech',
         projects: [
           {
-            id: 'captech-placeholder-a',
-            title: 'Placeholder project one',
+            id: 'us-foods',
+            title: 'US Foods',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            detailsHref: '#',
-            imageSrc: '/images/project-placeholder.svg',
-            imageAlt: '',
+              'Modernized inventory management for restaurant operators, reducing manual effort and helping customers better control food costs.',
+            detailsHref: '/work/us-foods',
+            imageSrc: '/images/clients/US_Foods_logo.svg.png',
+            imageAlt: 'US Foods logo',
+            imageThumbFit: 'contain',
+            imageThumbTileClassName: 'bg-portfolio-white p-1',
           },
           {
-            id: 'captech-placeholder-b',
-            title: 'Placeholder project two',
+            id: 'virginia-tax',
+            title: 'Virginia Tax',
             description:
-              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            detailsHref: '#',
-            imageSrc: '/images/project-placeholder.svg',
-            imageAlt: '',
-          },
-        ],
-      },
-      {
-        id: 'team-one',
-        name: 'Team One',
-        projects: [
-          {
-            id: 'team-one-placeholder-a',
-            title: 'Placeholder project one',
-            description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            detailsHref: '#',
-            imageSrc: '/images/project-placeholder.svg',
-            imageAlt: '',
+              'Shaped a future-state digital service strategy to simplify tax professional workflows and modernize state tax interactions.',
+            detailsHref: '/work/virginia-tax',
+            imageSrc: '/images/clients/vatax.png',
+            imageAlt: 'Virginia Tax logo',
+            imageThumbFit: 'cover',
+            imageThumbTileClassName: 'bg-portfolio-white',
           },
           {
-            id: 'team-one-placeholder-b',
-            title: 'Placeholder project two',
+            id: 'total-wine-more',
+            title: 'Total Wine & More',
             description:
-              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            detailsHref: '#',
-            imageSrc: '/images/project-placeholder.svg',
-            imageAlt: '',
-          },
-        ],
-      },
-      {
-        id: 'other',
-        name: 'Other',
-        projects: [
-          {
-            id: 'other-placeholder-a',
-            title: 'Placeholder project one',
-            description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            detailsHref: '#',
-            imageSrc: '/images/project-placeholder.svg',
-            imageAlt: '',
-          },
-          {
-            id: 'other-placeholder-b',
-            title: 'Placeholder project two',
-            description:
-              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            detailsHref: '#',
-            imageSrc: '/images/project-placeholder.svg',
-            imageAlt: '',
+              'Improved digital shopping confidence and trust through secure account experiences and omnichannel UX enhancements.',
+            detailsHref: '/work/total-wine-more',
+            imageSrc: '/images/clients/total%20wine.png',
+            imageAlt: 'Total Wine & More logo',
           },
         ],
       },

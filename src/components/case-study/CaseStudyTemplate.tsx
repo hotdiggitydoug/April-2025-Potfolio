@@ -1,16 +1,19 @@
+import { CaseStudyShell } from '@/components/case-study/CaseStudyShell'
 import type { CaseStudy } from '@/content/case-studies'
-import { ChevronLeft } from 'lucide-react'
 import fs from 'node:fs'
 import path from 'node:path'
 import Image from 'next/image'
-import Link from 'next/link'
 
 /** In dev, append mtime so replaced files under /public still reload (browser cache bust). */
 function publicAssetSrc(src: string): string {
   if (process.env.NODE_ENV !== 'development' || !src.startsWith('/')) {
     return src
   }
-  const abs = path.join(process.cwd(), 'public', ...src.split('/').filter(Boolean))
+  const abs = path.join(
+    process.cwd(),
+    'public',
+    ...src.split('/').filter(Boolean).map((segment) => decodeURIComponent(segment)),
+  )
   try {
     const mtime = fs.statSync(abs).mtimeMs
     return `${src}?v=${Math.floor(mtime)}`
@@ -29,23 +32,9 @@ export function CaseStudyTemplate({
   backHref = '/',
 }: CaseStudyTemplateProps) {
   return (
-    <div className="min-h-svh bg-cream-100 font-sans text-foreground antialiased">
-      <div className="mx-auto flex w-full max-w-[95rem] flex-col gap-layout px-layout py-page-y xl:px-page-x">
-        <header className="flex w-full flex-col">
-          <Link
-            href={backHref}
-            className="inline-flex w-fit items-center gap-tight text-base font-semibold text-portfolio-black no-underline visited:text-portfolio-black hover:text-portfolio-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-cream-100"
-          >
-            <ChevronLeft
-              className="size-8 shrink-0"
-              strokeWidth={2}
-              aria-hidden
-            />
-            Back to work
-          </Link>
-        </header>
-
-        <div className="flex w-full flex-col gap-tight leading-normal">
+    <CaseStudyShell backHref={backHref}>
+      <div className="flex w-full flex-col gap-layout">
+        <div className="flex flex-col gap-tight leading-normal">
           <h1 className="text-case-title font-semibold text-portfolio-black">
             {study.title}
           </h1>
@@ -102,6 +91,6 @@ export function CaseStudyTemplate({
           </section>
         </div>
       </div>
-    </div>
+    </CaseStudyShell>
   )
 }

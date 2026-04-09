@@ -13,7 +13,7 @@ export const caseStudiesBySlug: Record<string, CaseStudy> = {
     slug: 'enterprise-ai',
     title: 'Enterprise AI Transformation',
     subtitle:
-      'Led 0→1 AI product development and transformation initiatives across industries.',
+      'Since early 2025, I’ve been partnering with organizations to turn AI from a broad ambition into focused products and experiences that improve how people work and create meaningful enterprise value.',
     heroImage: {
       src: '/images/case-studies/enterprise-ai-hero.svg',
       alt: '',
@@ -74,6 +74,78 @@ export const caseStudiesBySlug: Record<string, CaseStudy> = {
       'Identified subscription strategy and UX patterns by analyzing leading DTC experiences across and beyond the category',
       'Defined the foundational information architecture for the DTC eCommerce experience',
       'Designed and iterated on the end-to-end customer journey (Homepage → PDP → Checkout → Account), shaping the initial product direction',
+    ],
+  },
+  'us-foods': {
+    slug: 'us-foods',
+    title: 'US Foods',
+    subtitle:
+      'Modernized inventory management for restaurant operators, reducing manual effort and helping customers better control food costs',
+    heroImage: {
+      src: '/images/case-studies/US%20Foods%20hero.png',
+      alt: 'US Foods case study hero',
+      width: 2656,
+      height: 1200,
+    },
+    context:
+      'US Foods, a leading food service distributor, wanted to transform its outdated inventory experience into a modern digital tool that better supported restaurant operators managing complex kitchens, fluctuating inventory, and tight margins. The opportunity extended beyond usability improvements — the business saw inventory as a strategic service that could deepen customer loyalty and position Foods of America as a more valuable operational partner.',
+    impact:
+      'Designed a mobile-first inventory experience that made stock counting, cost tracking, and inventory management faster and more intuitive for restaurant operators. The new experience reduced friction in day-to-day workflows, improved confidence in food cost calculations, and created a stronger digital value proposition that supported customer retention.',
+    highlights: [
+      'Led end-to-end UX for a redesigned inventory management experience across desktop and mobile',
+      'Conducted interviews and workshops with 15–20 restaurant operators, consultants, and internal stakeholders to uncover workflow pain points',
+      'Built deep domain understanding of restaurant operations, food costing, and inventory processes to inform product decisions',
+      'Simplified key workflows including product entry, editing on-the-fly, sorting, grouping, and real-time count totals',
+      'Designed a mobile-first shelf-to-sheet counting experience optimized for operators moving through kitchens',
+      'Introduced food cost visibility and reporting features to help customers better manage profitability',
+      'Helped position Foods of America as a business advisor, not just a distributor, through more valuable digital services',
+      'Partnered with executives, IT, and operations teams to align roadmap priorities and prepare for launch',
+    ],
+  },
+  'virginia-tax': {
+    slug: 'virginia-tax',
+    title: 'Virginia Tax',
+    subtitle:
+      'Shaped a future-state digital service strategy to simplify tax professional workflows and modernize state tax interactions',
+    heroImage: {
+      src: '/images/case-studies/VA%20Tax%20hero.png',
+      alt: 'Virginia Tax case study hero',
+      width: 2656,
+      height: 1200,
+    },
+    context:
+      'In response to a Virginia House bill, Virginia Tax engaged CapTech to evaluate the opportunity to create a dedicated digital portal for tax professionals. The existing experience was fragmented, creating friction for preparers, delayed issue resolution, and limited visibility into taxpayer needs.',
+    impact:
+      'Delivered a research-backed service vision and roadmap that helped Virginia Tax better understand pain points across the tax professional journey and identify opportunities to improve digital support, reduce administrative burden, and strengthen compliance experiences.',
+    highlights: [
+      'Interviewed 39 internal stakeholders across Virginia Tax to uncover operational pain points and service gaps',
+      'Conducted heuristic evaluations of current digital experiences to identify usability and accessibility issues',
+      'Benchmarked tax professional experiences across five other states and the IRS to identify best practices',
+      'Synthesized feedback from 140+ tax professionals into prioritized design opportunities',
+      'Partnered with leadership to define portal requirements and inform a multi-year digital roadmap',
+    ],
+  },
+  'total-wine-more': {
+    slug: 'total-wine-more',
+    title: 'Total Wine & More',
+    subtitle:
+      'Improved digital shopping confidence and trust through secure account experiences and omnichannel UX enhancements',
+    heroImage: {
+      src: '/images/case-studies/Total%20wine%20hero.png',
+      alt: 'Total Wine & More case study hero',
+      width: 2656,
+      height: 1200,
+    },
+    context:
+      'As a consultant with CapTech, I embedded with Total Wine & More\u2019s digital team to support initiatives across eCommerce strategy, UX research, and product design. The business was focused on improving customer trust, personalization, and omnichannel convenience in a highly competitive retail environment.',
+    impact:
+      'Helped strengthen key moments across the digital customer journey by improving account security, informing location-based shopping experiences, and identifying merchandising opportunities that better aligned digital touchpoints with in-store behavior.',
+    highlights: [
+      'Designed two-factor authentication and account verification flows to reduce fraudulent credit card activity',
+      'Evaluated omnichannel retailer approaches to geo-targeting and store preference experiences',
+      'Benchmarked lists and favorites patterns across leading eCommerce brands to inform roadmap decisions',
+      'Explored PLP merchandising and badging strategies to improve discoverability during key sales periods',
+      'Presented recommendations and design rationale to digital executives in weekly product reviews',
     ],
   },
 }

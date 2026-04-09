@@ -12,6 +12,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project, className }: ProjectCardProps) {
   const src = project.imageSrc ?? '/images/project-placeholder.svg'
+  const thumbFit = project.imageThumbFit ?? 'cover'
 
   return (
     <Link
@@ -38,14 +39,24 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
                 'size-10 shrink-0 overflow-hidden rounded-lg',
                 'transition-[width,height] duration-300 ease-out motion-reduce:transition-none',
                 'group-hover/card:size-11',
+                project.imageThumbTileClassName,
               )}
             >
               <Image
                 src={src}
                 alt={project.imageAlt ?? ''}
-                className="size-full object-cover"
+                className={cn(
+                  'size-full',
+                  thumbFit === 'contain' ? 'object-contain' : 'object-cover',
+                  project.imageThumbScaleClassName,
+                )}
                 width={44}
                 height={44}
+                style={
+                  project.imageThumbObjectPosition
+                    ? { objectPosition: project.imageThumbObjectPosition }
+                    : undefined
+                }
               />
             </div>
             <p className="min-w-0 flex-1 text-xl font-semibold text-card-foreground">
