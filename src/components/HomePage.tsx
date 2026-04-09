@@ -4,7 +4,6 @@ import { homeContent } from '@/content/home'
 
 export function HomePage() {
   const { identity, work } = homeContent
-  const defaultOpen = work.employers[0]?.id ?? ''
 
   return (
     <PortfolioShell
@@ -21,8 +20,8 @@ export function HomePage() {
     >
       <WorkSection
         sectionHeading={work.sectionHeading}
+        confidentialityNote={work.confidentialityNote}
         employers={[...work.employers]}
-        defaultOpenEmployerId={defaultOpen}
       />
     </PortfolioShell>
   )

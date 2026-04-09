@@ -1,3 +1,4 @@
+import { EnterpriseAiCaseStudy } from '@/components/case-study/EnterpriseAiCaseStudy'
 import { CaseStudyTemplate } from '@/components/case-study/CaseStudyTemplate'
 import {
   getAllCaseStudySlugs,
@@ -31,6 +32,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
   const study = getCaseStudy(slug)
   if (!study) {
     notFound()
+  }
+
+  if (slug === 'enterprise-ai') {
+    return <EnterpriseAiCaseStudy study={study} />
   }
 
   return <CaseStudyTemplate study={study} />

@@ -56,7 +56,7 @@ export function SidebarIdentity({
             href={email.href}
             className={cn(
               buttonVariants({ variant: 'secondary' }),
-              'h-auto rounded-lg border border-solid border-cream-900 px-4 py-2 text-base font-semibold',
+              'h-auto rounded-lg border border-solid border-cream-900 px-4 py-2 text-base font-semibold transition-colors duration-200 ease-out motion-reduce:transition-none hover:border-cement-100 hover:bg-cream-550 hover:text-portfolio-black',
             )}
           >
             {email.label}
@@ -65,7 +65,7 @@ export function SidebarIdentity({
             href={linkedIn.href}
             className={cn(
               buttonVariants({ variant: 'secondary' }),
-              'h-auto rounded-lg border border-solid border-cream-900 px-4 py-2 text-base font-semibold',
+              'h-auto rounded-lg border border-solid border-cream-900 px-4 py-2 text-base font-semibold transition-colors duration-200 ease-out motion-reduce:transition-none hover:border-cement-100 hover:bg-cream-550 hover:text-portfolio-black',
             )}
             target="_blank"
             rel="noreferrer"
@@ -73,6 +73,19 @@ export function SidebarIdentity({
             {linkedIn.label}
           </a>
         </nav>
+        <div className="flex items-center gap-tight self-start">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            className="size-4 shrink-0 fill-cream-900"
+            aria-hidden
+          >
+            <path d="M756-120 537-339l84-84 219 219-84 84Zm-552 0-84-84 276-276-68-68-28 28-51-51v82l-28 28-121-121 28-28h82l-50-50 142-142q20-20 43-29t47-9q24 0 47 9t43 29l-92 92 50 50-28 28 68 68 90-90q-4-11-6.5-23t-2.5-24q0-59 40.5-99.5T701-841q15 0 28.5 3t27.5 9l-99 99 72 72 99-99q7 14 9.5 27.5T841-701q0 59-40.5 99.5T701-561q-12 0-24-2t-23-7L204-120Z" />
+          </svg>
+          <span className="text-xs text-muted-foreground">
+            Built with Figma + Cursor
+          </span>
+        </div>
       </div>
     </div>
   )
