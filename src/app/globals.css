@@ -4,16 +4,56 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* ─── Tailwind theme: maps utilities (bg-cream-100, p-layout, …) to tokens ─── */
+/* ─── Tailwind theme: folio-* neutrals + legacy aliases (cream/cement) + spacing ─── */
 @theme inline {
-  /* Case study page (Figma 1191:197) main heading */
-  --text-case-title: 2rem;
-  --text-case-title--line-height: normal;
+  /*
+   * Typography scale (~15% smaller than Tailwind defaults, min 12px).
+   * Line heights tuned for hierarchy: roomier body, tighter display.
+   */
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.125rem;
+  --text-sm: 0.8125rem;
+  --text-sm--line-height: 1.21875rem;
+  --text-base: 0.85rem;
+  --text-base--line-height: 1.275rem;
+  --text-lg: 0.95625rem;
+  --text-lg--line-height: 1.375rem;
+  --text-xl: 1.0625rem;
+  --text-xl--line-height: 1.4375rem;
+  --text-2xl: 1.275rem;
+  --text-2xl--line-height: 1.59375rem;
+  --text-3xl: 1.59375rem;
+  --text-3xl--line-height: 1.875rem;
+  --text-4xl: 1.9125rem;
+  --text-4xl--line-height: 2.125rem;
+  --text-5xl: 2.55rem;
+  --text-5xl--line-height: 1;
+  --text-6xl: 3.1875rem;
+  --text-6xl--line-height: 1;
+  --text-7xl: 3.825rem;
+  --text-7xl--line-height: 1;
+  --text-8xl: 5.1rem;
+  --text-8xl--line-height: 1;
+  --text-9xl: 6.8rem;
+  --text-9xl--line-height: 1;
+
+  /* Case study page main heading (scaled with the type ramp) */
+  --text-case-title: 1.7rem;
+  --text-case-title--line-height: 1.15;
 
   --font-heading: var(--font-open-sans);
   --font-sans:
     var(--font-open-sans), ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --color-folio-000: var(--folio-000);
+  --color-folio-100: var(--folio-100);
+  /* Hairlines / default borders */
+  --color-folio-150: var(--folio-150);
+  --color-folio-200: var(--folio-200);
+  --color-folio-500: var(--folio-500);
+  --color-folio-700: var(--folio-700);
+  --color-folio-900: var(--folio-900);
 
   --color-cream-100: var(--cream-100);
   --color-cream-500: var(--cream-500);
@@ -22,25 +62,26 @@
   --color-cement-100: var(--cement-100);
   --color-cement-500: var(--cement-500);
   --color-cement-900: var(--cement-900);
-  --color-portfolio-black: var(--black);
-  --color-portfolio-white: var(--white);
+  --color-portfolio-black: var(--folio-900);
+  --color-portfolio-white: var(--folio-000);
 
-  --spacing-layout: 2.5rem;
-  --spacing-section: 1.5rem;
-  --spacing-block: 1.25rem;
-  --spacing-tight: 0.5rem;
+  /* Spacing rhythm (~15% tighter to match reduced type) */
+  --spacing-layout: 2.125rem;
+  --spacing-section: 1.275rem;
+  --spacing-block: 1.0625rem;
+  --spacing-tight: 0.4375rem;
   /* Figma sidebar: gap between Email / LinkedIn */
-  --spacing-cta-gap: 1rem;
-  /* Work accordion: between “no gap” and `section` */
-  --spacing-sunk: 0.75rem;
-  /* Between `block` (1.25rem) and `section` (1.5rem) */
-  --spacing-comfort: 1.375rem;
-  /* Between `section` (1.5rem) and `layout` (2.5rem) */
-  --spacing-loft: 2rem;
-  /* Case study template: horizontal gutter at xl (between compact ~80px and Figma ~200px) */
-  --spacing-page-x: 8.5rem;
-  /* Case study template: 80px top + bottom */
-  --spacing-page-y: 5rem;
+  --spacing-cta-gap: 0.85rem;
+  /* Tight blocks between label groups */
+  --spacing-sunk: 0.6375rem;
+  /* Between `block` and `section` */
+  --spacing-comfort: 1.16875rem;
+  /* Between `section` and `layout` */
+  --spacing-loft: 1.7rem;
+  /* Case study template: horizontal gutter at xl */
+  --spacing-page-x: 7.225rem;
+  /* Case study template: vertical page padding */
+  --spacing-page-y: 4.25rem;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -94,92 +135,137 @@
   }
 }
 
-/* ─── Figma variables + shadcn semantics (single source for app + shadcn/ui) ─── */
+/* ─── Foundational neutrals + shadcn semantics (single source for app + shadcn/ui) ─── */
 :root {
-  --black: #000000;
-  --white: #ffffff;
-  --cream-100: #faf9f5;
-  --cream-500: #f5f4ee;
-  --cream-550: #ebeae3;
-  --cream-900: #d1cfc6;
-  --cement-100: #c0c0c0;
-  --cement-500: #62615d;
-  --cement-900: #141413;
+  --folio-000: #ffffff;
+  --folio-100: #f9fafb;
+  /*
+   * Hairline / default border. Tuned for WCAG 2.1 SC 1.4.11 (non-text): ≥3:1 vs
+   * adjacent #fff and #f3f4f6 (card edges on gray canvas). Lighter than folio-500.
+   */
+  --folio-150: #868b93;
+  --folio-200: #f3f4f6;
+  --folio-500: #6b7280;
+  --folio-700: #374151;
+  --folio-900: #111827;
 
-  --background: var(--cream-100);
-  --foreground: var(--black);
-  --card: var(--cream-500);
-  --card-foreground: var(--black);
-  --popover: var(--cream-500);
-  --popover-foreground: var(--black);
-  --primary: var(--cement-900);
-  --primary-foreground: var(--white);
-  --secondary: var(--cream-500);
-  --secondary-foreground: var(--cement-500);
-  --muted: var(--cream-500);
-  --muted-foreground: var(--cement-500);
-  --accent: var(--cream-500);
-  --accent-foreground: var(--black);
+  /* Legacy names → folio ramp (existing components keep working) */
+  --black: var(--folio-900);
+  --white: var(--folio-000);
+  --cream-100: var(--folio-100);
+  --cream-500: var(--folio-000);
+  --cream-550: var(--folio-200);
+  /* Legacy border/hairline — maps to soft rule token */
+  --cream-900: var(--folio-150);
+  --cement-100: var(--folio-150);
+  --cement-500: var(--folio-700);
+  --cement-900: var(--folio-900);
+
+  /* UI semantics: reference layout — main canvas white, sidebar off-white, cool grays for type */
+  --background: var(--folio-000);
+  --foreground: var(--folio-700);
+  --card: var(--folio-000);
+  --card-foreground: var(--folio-900);
+  --popover: var(--folio-000);
+  --popover-foreground: var(--folio-900);
+  --primary: var(--folio-900);
+  --primary-foreground: var(--folio-000);
+  --secondary: var(--folio-000);
+  --secondary-foreground: var(--folio-700);
+  --muted: var(--folio-100);
+  --muted-foreground: var(--folio-500);
+  --accent: var(--folio-200);
+  --accent-foreground: var(--folio-900);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: var(--cream-900);
-  --input: var(--cream-900);
-  --ring: var(--cement-500);
+  --border: var(--folio-150);
+  --input: var(--folio-150);
+  --ring: var(--folio-500);
   --radius: 0.5rem;
 
-  --chart-1: var(--cement-100);
-  --chart-2: var(--cement-500);
-  --chart-3: var(--cement-900);
-  --chart-4: var(--cream-900);
-  --chart-5: var(--cream-500);
+  --chart-1: var(--folio-200);
+  --chart-2: var(--folio-500);
+  --chart-3: var(--folio-700);
+  --chart-4: var(--folio-150);
+  --chart-5: var(--folio-100);
 
-  --sidebar: var(--cream-100);
-  --sidebar-foreground: var(--black);
-  --sidebar-primary: var(--cement-900);
-  --sidebar-primary-foreground: var(--white);
-  --sidebar-accent: var(--cream-500);
-  --sidebar-accent-foreground: var(--black);
-  --sidebar-border: var(--cream-900);
-  --sidebar-ring: var(--cement-500);
+  --sidebar: var(--folio-100);
+  --sidebar-foreground: var(--folio-900);
+  --sidebar-primary: var(--folio-900);
+  --sidebar-primary-foreground: var(--folio-000);
+  --sidebar-accent: var(--folio-200);
+  --sidebar-accent-foreground: var(--folio-900);
+  --sidebar-border: var(--folio-150);
+  --sidebar-ring: var(--folio-500);
 }
 
 .dark {
-  --background: var(--cream-100);
-  --foreground: var(--black);
-  --cream-550: #ebeae3;
-  --card: var(--cream-500);
-  --card-foreground: var(--black);
-  --popover: var(--cream-500);
-  --popover-foreground: var(--black);
-  --primary: var(--cement-900);
-  --primary-foreground: var(--white);
-  --secondary: var(--cream-500);
-  --secondary-foreground: var(--cement-500);
-  --muted: var(--cream-500);
-  --muted-foreground: var(--cement-500);
-  --accent: var(--cream-500);
-  --accent-foreground: var(--black);
+  --background: var(--folio-000);
+  --foreground: var(--folio-700);
+  --card: var(--folio-000);
+  --card-foreground: var(--folio-900);
+  --popover: var(--folio-000);
+  --popover-foreground: var(--folio-900);
+  --primary: var(--folio-900);
+  --primary-foreground: var(--folio-000);
+  --secondary: var(--folio-000);
+  --secondary-foreground: var(--folio-700);
+  --muted: var(--folio-100);
+  --muted-foreground: var(--folio-500);
+  --accent: var(--folio-200);
+  --accent-foreground: var(--folio-900);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: var(--cream-900);
-  --input: var(--cream-900);
-  --ring: var(--cement-500);
-  --sidebar: var(--cream-100);
-  --sidebar-foreground: var(--black);
-  --sidebar-primary: var(--cement-900);
-  --sidebar-primary-foreground: var(--white);
-  --sidebar-accent: var(--cream-500);
-  --sidebar-accent-foreground: var(--black);
-  --sidebar-border: var(--cream-900);
-  --sidebar-ring: var(--cement-500);
+  --border: var(--folio-150);
+  --input: var(--folio-150);
+  --ring: var(--folio-500);
+  --sidebar: var(--folio-100);
+  --sidebar-foreground: var(--folio-900);
+  --sidebar-primary: var(--folio-900);
+  --sidebar-primary-foreground: var(--folio-000);
+  --sidebar-accent: var(--folio-200);
+  --sidebar-accent-foreground: var(--folio-900);
+  --sidebar-border: var(--folio-150);
+  --sidebar-ring: var(--folio-500);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground antialiased;
-  }
   html {
     @apply font-sans;
+    font-feature-settings:
+      'kern' 1,
+      'liga' 1;
+  }
+  body {
+    @apply bg-background text-foreground antialiased text-base;
+  }
+  h1 {
+    @apply text-4xl font-semibold tracking-tight text-folio-900;
+  }
+  h2 {
+    @apply text-2xl font-semibold tracking-tight text-folio-900;
+  }
+  h3 {
+    @apply text-xl font-semibold tracking-tight text-folio-900;
+  }
+  h4 {
+    @apply text-lg font-semibold text-folio-900;
+  }
+  h5 {
+    @apply text-base font-semibold text-folio-900;
+  }
+  h6 {
+    @apply text-sm font-semibold text-folio-900;
+  }
+  p {
+    @apply text-base text-foreground;
+  }
+  small,
+  figcaption {
+    @apply text-sm text-muted-foreground;
+  }
+  strong {
+    @apply font-semibold;
   }
 }

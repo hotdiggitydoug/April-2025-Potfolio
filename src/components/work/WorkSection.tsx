@@ -1,10 +1,3 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion'
-import { Separator } from '@/components/ui/separator'
 import type { HomeEmployer } from '@/content/home'
 
 import { ProjectCard } from './ProjectCard'
@@ -20,6 +13,8 @@ export function WorkSection({
   confidentialityNote,
   employers,
 }: WorkSectionProps) {
+  const projects = employers.flatMap((employer) => employer.projects)
+
   return (
     <section
       className="flex flex-col gap-section"
@@ -40,31 +35,13 @@ export function WorkSection({
           {confidentialityNote}
         </p>
       </div>
-      <Accordion
-        multiple
-        defaultValue={employers.map((employer) => employer.id)}
-        className="w-full border-0 shadow-none"
-      >
-        {employers.map((employer) => (
-          <AccordionItem key={employer.id} value={employer.id}>
-            <Separator className="mb-0 bg-cement-100" />
-            <AccordionTrigger className="text-2xl font-semibold text-cement-500 hover:no-underline">
-              <span className="pr-tight text-left">{employer.name}</span>
-            </AccordionTrigger>
-            <AccordionContent className="pt-sunk">
-              {employer.projects.length > 0 ? (
-                <ul className="flex flex-col gap-comfort pb-loft">
-                  {employer.projects.map((project) => (
-                    <li key={project.id}>
-                      <ProjectCard project={project} />
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </AccordionContent>
-          </AccordionItem>
+      <ul className="flex w-full flex-col gap-comfort">
+        {projects.map((project) => (
+          <li key={project.id}>
+            <ProjectCard project={project} />
+          </li>
         ))}
-      </Accordion>
+      </ul>
     </section>
   )
 }

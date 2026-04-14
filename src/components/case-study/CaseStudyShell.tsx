@@ -31,12 +31,12 @@ export function CaseStudyShell({
   children,
 }: CaseStudyShellProps) {
   return (
-    <div className="min-h-svh bg-cream-100 font-sans text-foreground antialiased">
+    <div className="min-h-svh bg-background font-sans text-foreground antialiased">
       <div className="mx-auto flex w-full max-w-[95rem] flex-col gap-layout px-layout py-page-y xl:px-page-x">
         <header className="flex w-full flex-col">
           <Link
             href={backHref}
-            className="group inline-flex w-fit items-center gap-tight text-base font-semibold text-portfolio-black no-underline transition-colors duration-200 ease-out visited:text-portfolio-black hover:text-cement-500 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-cream-100"
+            className="group inline-flex w-fit items-center gap-tight text-base font-semibold text-portfolio-black no-underline transition-colors duration-200 ease-out visited:text-portfolio-black hover:text-folio-500 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             <BackArrowIcon className="size-7 shrink-0" />
             Back to work
