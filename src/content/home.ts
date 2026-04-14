@@ -7,7 +7,7 @@ export type HomeProject = {
   imageAlt?: string
   /** How the logo fills the thumbnail; default cover */
   imageThumbFit?: 'cover' | 'contain'
-  /** Optional classes on the thumbnail wrapper (e.g. bg-cream-900, padding) */
+  /** Optional classes on the thumbnail wrapper (e.g. bg-folio-200, padding) */
   imageThumbTileClassName?: string
   /** CSS object-position for raster logos (e.g. center 40%) */
   imageThumbObjectPosition?: string
