@@ -21,7 +21,7 @@ export function HomePage() {
       <WorkSection
         sectionHeading={work.sectionHeading}
         confidentialityNote={work.confidentialityNote}
-        employers={[...work.employers]}
+        employers={work.employers}
       />
     </PortfolioShell>
   )

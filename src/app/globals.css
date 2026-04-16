@@ -41,10 +41,12 @@
   --text-case-title: 1.7rem;
   --text-case-title--line-height: 1.15;
 
-  --font-heading: var(--font-open-sans);
+  /* Primary UI + heading: Inconsolata (humanist monospace) */
+  --font-heading: var(--font-inconsolata);
   --font-sans:
-    var(--font-open-sans), ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    var(--font-inconsolata), ui-monospace, 'Cascadia Code', 'Source Code Pro',
+    Menlo, Monaco, Consolas, monospace, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
 
   --color-folio-000: var(--folio-000);
   --color-folio-100: var(--folio-100);

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Open_Sans } from 'next/font/google'
+import { Inconsolata } from 'next/font/google'
 
 import './globals.css'
 
-const openSans = Open_Sans({
+const inconsolata = Inconsolata({
   subsets: ['latin'],
-  weight: ['400', '600'],
-  variable: '--font-open-sans',
+  weight: ['400', '500', '600'],
+  variable: '--font-inconsolata',
   display: 'swap',
 })
 
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={openSans.variable}>
+    <html lang="en" className={inconsolata.variable}>
       <body className="m-0">{children}</body>
     </html>
   )

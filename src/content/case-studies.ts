@@ -48,10 +48,10 @@ export const caseStudiesBySlug: Record<string, CaseStudy> = {
     impact:
       'Improved product discovery, navigation, and conversion by aligning taxonomy, search, and PDP patterns with how owners and technicians actually shop.',
     highlights: [
-      'Mapped end-to-end journeys for DIY owners, enthusiasts, and professional installers',
-      'Redesigned navigation and listing templates to reduce dead-ends and support high-consideration purchases',
-      'Pressure-tested proposed UX with quantitative concept tests and qualitative sessions',
-      'Worked with technology partners to prioritize roadmap items that balanced speed with enterprise constraints',
+      'Mapped end-to-end journeys for DIY owners, enthusiasts, and professional installers to uncover breakdowns in product discovery',
+      'Redesigned navigation and listing patterns to reduce dead-ends and support high-consideration purchases',
+      'Validated proposed UX direction through a mix of quantitative testing and qualitative sessions',
+      'Worked with product and engineering teams to prioritize roadmap items within enterprise constraints',
     ],
   },
   medical: {
@@ -70,10 +70,10 @@ export const caseStudiesBySlug: Record<string, CaseStudy> = {
     impact:
       'Shaped the initial DTC product experience, informing early product, pricing, and subscription strategy',
     highlights: [
-      'Validated customer willingness to pay and key sentiment drivers through quantitative testing in a new product category',
-      'Identified subscription strategy and UX patterns by analyzing leading DTC experiences across and beyond the category',
-      'Defined the foundational information architecture for the DTC eCommerce experience',
-      'Designed and iterated on the end-to-end customer journey (Homepage → PDP → Checkout → Account), shaping the initial product direction',
+      'Conducted quantitative testing to understand willingness to pay and key drivers of customer sentiment in a new category',
+      'Analyzed leading DTC experiences to inform early subscription and engagement models',
+      'Structured the foundational information architecture to support scale across the eCommerce experience',
+      'Designed and iterated on core journeys from discovery through account creation and purchase',
     ],
   },
   'us-foods': {
@@ -93,13 +93,10 @@ export const caseStudiesBySlug: Record<string, CaseStudy> = {
       'Designed a mobile-first inventory experience that made stock counting, cost tracking, and inventory management faster and more intuitive for restaurant operators. The new experience reduced friction in day-to-day workflows, improved confidence in food cost calculations, and created a stronger digital value proposition that supported customer retention.',
     highlights: [
       'Led end-to-end UX for a redesigned inventory management experience across desktop and mobile',
-      'Conducted interviews and workshops with 15–20 restaurant operators, consultants, and internal stakeholders to uncover workflow pain points',
-      'Built deep domain understanding of restaurant operations, food costing, and inventory processes to inform product decisions',
-      'Simplified key workflows including product entry, editing on-the-fly, sorting, grouping, and real-time count totals',
-      'Designed a mobile-first shelf-to-sheet counting experience optimized for operators moving through kitchens',
-      'Introduced food cost visibility and reporting features to help customers better manage profitability',
-      'Helped position Foods of America as a business advisor, not just a distributor, through more valuable digital services',
-      'Partnered with executives, IT, and operations teams to align roadmap priorities and prepare for launch',
+      'Conducted interviews and workshops with restaurant operators to understand workflow pain points',
+      'Designed mobile-first workflows for counting, editing, and managing inventory in fast-paced kitchen environments',
+      'Introduced features to improve visibility into food costs and inventory performance',
+      'Partnered with cross-functional teams to align product direction and support launch readiness',
     ],
   },
   'virginia-tax': {
@@ -118,11 +115,11 @@ export const caseStudiesBySlug: Record<string, CaseStudy> = {
     impact:
       'Delivered a research-backed service vision and roadmap that helped Virginia Tax better understand pain points across the tax professional journey and identify opportunities to improve digital support, reduce administrative burden, and strengthen compliance experiences.',
     highlights: [
-      'Interviewed 39 internal stakeholders across Virginia Tax to uncover operational pain points and service gaps',
-      'Conducted heuristic evaluations of current digital experiences to identify usability and accessibility issues',
-      'Benchmarked tax professional experiences across five other states and the IRS to identify best practices',
-      'Synthesized feedback from 140+ tax professionals into prioritized design opportunities',
-      'Partnered with leadership to define portal requirements and inform a multi-year digital roadmap',
+      'Interviewed 39 internal stakeholders to uncover operational pain points and service gaps',
+      'Conducted heuristic evaluations to identify usability and accessibility issues across existing tools',
+      'Benchmarked experiences across peer states and the IRS to identify patterns and best practices',
+      'Synthesized input from tax professionals into prioritized opportunities to inform future design',
+      'Collaborated with leadership to define requirements for a centralized digital portal',
     ],
   },
   'total-wine-more': {
@@ -141,11 +138,11 @@ export const caseStudiesBySlug: Record<string, CaseStudy> = {
     impact:
       'Helped strengthen key moments across the digital customer journey by improving account security, informing location-based shopping experiences, and identifying merchandising opportunities that better aligned digital touchpoints with in-store behavior.',
     highlights: [
-      'Designed two-factor authentication and account verification flows to reduce fraudulent credit card activity',
-      'Evaluated omnichannel retailer approaches to geo-targeting and store preference experiences',
-      'Benchmarked lists and favorites patterns across leading eCommerce brands to inform roadmap decisions',
-      'Explored PLP merchandising and badging strategies to improve discoverability during key sales periods',
-      'Presented recommendations and design rationale to digital executives in weekly product reviews',
+      'Designed two-factor authentication and account verification flows to improve account security',
+      'Evaluated omnichannel approaches to geo-targeting and store preference experiences',
+      'Benchmarked lists, favorites, and personalization patterns across leading eCommerce brands',
+      'Explored merchandising and badging strategies to improve product discoverability',
+      'Presented recommendations and design rationale to stakeholders in ongoing product reviews',
     ],
   },
 }

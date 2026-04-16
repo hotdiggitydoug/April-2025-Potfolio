@@ -30,23 +30,33 @@ export function SidebarIdentity({
   about,
   email,
   linkedIn,
-}: Omit<HomeIdentity, 'initials'>) {
+}: HomeIdentity) {
   return (
     <div className="flex min-h-0 w-full flex-1 flex-col justify-between gap-0">
       <header className="flex shrink-0 flex-col gap-tight">
-        <p className="text-base font-semibold uppercase tracking-wide text-portfolio-black">
+        <p className="text-xl font-semibold uppercase tracking-wide text-portfolio-black">
           {name}
         </p>
-        <p className="text-base font-semibold text-muted-foreground">{title}</p>
+        <p className="text-xl font-semibold text-muted-foreground">{title}</p>
       </header>
       <div className="flex shrink-0 flex-col gap-section">
         <section className="flex flex-col gap-tight">
-          <h2 className="text-base font-semibold uppercase tracking-wide text-portfolio-black">
+          <h2 className="text-xl font-semibold uppercase tracking-wide text-portfolio-black">
             {aboutHeading}
           </h2>
-          <p className="text-xl font-normal leading-normal text-muted-foreground">
-            {about}
-          </p>
+          <div className="flex flex-col gap-tight">
+            {about
+              .trim()
+              .split(/\n\n+/)
+              .map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-xl font-normal leading-normal text-muted-foreground"
+                >
+                  {paragraph.trim()}
+                </p>
+              ))}
+          </div>
         </section>
         <nav
           className="flex flex-wrap items-start gap-cta-gap"
@@ -56,7 +66,7 @@ export function SidebarIdentity({
             href={email.href}
             className={cn(
               buttonVariants({ variant: 'secondary' }),
-              'h-auto rounded-lg border border-solid border-border px-4 py-2 text-base font-semibold transition-colors duration-300 ease-out motion-reduce:transition-none hover:border-border hover:bg-folio-100 hover:text-portfolio-black',
+              'h-auto rounded-lg border border-solid border-border px-4 py-2 text-base font-semibold transition-colors duration-300 ease-out motion-reduce:transition-none hover:border-folio-900 hover:bg-card hover:text-folio-900',
             )}
           >
             {email.label}
@@ -65,7 +75,7 @@ export function SidebarIdentity({
             href={linkedIn.href}
             className={cn(
               buttonVariants({ variant: 'secondary' }),
-              'h-auto rounded-lg border border-solid border-border px-4 py-2 text-base font-semibold transition-colors duration-300 ease-out motion-reduce:transition-none hover:border-border hover:bg-folio-100 hover:text-portfolio-black',
+              'h-auto rounded-lg border border-solid border-border px-4 py-2 text-base font-semibold transition-colors duration-300 ease-out motion-reduce:transition-none hover:border-folio-900 hover:bg-card hover:text-folio-900',
             )}
             target="_blank"
             rel="noreferrer"
@@ -77,6 +87,8 @@ export function SidebarIdentity({
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 -960 960 960"
+            width={16}
+            height={16}
             className="size-4 shrink-0 fill-current text-muted-foreground"
             aria-hidden
           >
