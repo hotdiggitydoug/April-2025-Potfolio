@@ -24,7 +24,6 @@ export type HomeEmployer = {
 /** Left column only — Figma Frame 1191:133 has no portrait / photo. */
 export type HomeIdentity = {
   name: string
-  initials: string
   title: string
   aboutHeading: string
   about: string
@@ -35,10 +34,11 @@ export type HomeIdentity = {
 export const homeContent = {
   identity: {
     name: 'Doug West',
-    initials: 'DW',
-    title: 'Lead Product Manager',
+    title: 'Product Lead – AI-Powered Experiences',
     aboutHeading: '/ About',
-    about: `I partner with ambitious teams to study customer behavior, reimagine products, and launch new businesses. My work is rooted in an understanding of user needs, business objectives, and the rapidly evolving possibilities of technology.`,
+    about: `I partner with ambitious teams to study customer behavior, reimagine products, and launch new businesses. My work is rooted in an understanding of user needs, business objectives, and the rapidly evolving possibilities of technology.
+
+Most recently, I've focused on designing and building AI-powered products and experiences that improve how people work and create meaningful business value.`,
     email: {
       label: 'Email',
       href: 'mailto:wdwesthree@gmail.com?subject=Portfolio%20inquiry',
@@ -52,6 +52,7 @@ export const homeContent = {
     sectionHeading: '/ Work',
     confidentialityNote:
       'Due to client confidentiality agreements, select impact stories may use generalized client names and may omit supporting visual assets',
+    /* Card `description` values: homepage one-liners (case study pages use `subtitle` in case-studies.ts). */
     employers: [
       {
         id: 'mckinsey',
@@ -61,7 +62,7 @@ export const homeContent = {
             id: 'enterprise-ai',
             title: 'Enterprise AI Transformation',
             description:
-              'Translating AI into tangible products, decision-making tools, and transformation strategies across industries.',
+              'Turned AI from broad ambition into practical products and experiences that improve how people work',
             detailsHref: '/work/enterprise-ai',
             imageSrc: '/images/mckinsey-logo.png',
             imageAlt: 'McKinsey & Company logo',
@@ -70,7 +71,7 @@ export const homeContent = {
             id: 'automotive',
             title: 'Top 3 Global Automotive OEM',
             description:
-              'Redesigned the parts and accessories eCommerce experience for a global automotive OEM, improving product discovery, navigation, and conversion.',
+              'Modernized an aftermarket parts shopping experience to improve product discovery and conversion',
             detailsHref: '/work/automotive',
             imageSrc: '/images/mckinsey-logo.png',
             imageAlt: 'McKinsey & Company logo',
@@ -79,7 +80,7 @@ export const homeContent = {
             id: 'medical',
             title: 'Top 3 Medical Device Manufacturer',
             description:
-              'Helped launch a new glucose monitoring business by designing the end-to-end DTC product experience.',
+              'Shaped the 0→1 digital experience and subscription model for a new biosensor product',
             detailsHref: '/work/medical',
             imageSrc: '/images/mckinsey-logo.png',
             imageAlt: 'McKinsey & Company logo',
@@ -94,7 +95,7 @@ export const homeContent = {
             id: 'us-foods',
             title: 'US Foods',
             description:
-              'Modernized inventory management for restaurant operators, reducing manual effort and helping customers better control food costs.',
+              'Redesigned inventory workflows to better support the pace and realities of restaurant operations',
             detailsHref: '/work/us-foods',
             imageSrc: '/images/clients/US_Foods_logo.svg.png',
             imageAlt: 'US Foods logo',
@@ -105,7 +106,7 @@ export const homeContent = {
             id: 'virginia-tax',
             title: 'Virginia Tax',
             description:
-              'Shaped a future-state digital service strategy to simplify tax professional workflows and modernize state tax interactions.',
+              'Defined a future-state digital service to reduce friction and administrative burden for tax professionals',
             detailsHref: '/work/virginia-tax',
             imageSrc: '/images/clients/vatax.png',
             imageAlt: 'Virginia Tax logo',
@@ -116,7 +117,7 @@ export const homeContent = {
             id: 'total-wine-more',
             title: 'Total Wine & More',
             description:
-              'Improved digital shopping confidence and trust through secure account experiences and omnichannel UX enhancements.',
+              'Strengthened key moments across the customer shopping journey to improve trust, personalization, and discovery',
             detailsHref: '/work/total-wine-more',
             imageSrc: '/images/clients/total%20wine.png',
             imageAlt: 'Total Wine & More logo',

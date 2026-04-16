@@ -8,13 +8,13 @@ import { cn } from '@/lib/utils'
 import type { CaseStudy } from '@/content/case-studies'
 
 type EnterpriseAiCaseStudyProps = {
-  study: CaseStudy
+  study: Pick<CaseStudy, 'title' | 'subtitle'>
   backHref?: string
 }
 
 function FeaturedCard({ card }: { card: EnterpriseAiFeaturedCard }) {
   return (
-    <article className="flex min-h-0 flex-1 flex-col gap-5 rounded-lg border border-cream-900 bg-cream-500 p-6">
+    <article className="flex min-h-0 flex-1 flex-col gap-5 rounded-lg border border-border bg-folio-000 p-6">
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-3">
           <img
@@ -91,7 +91,7 @@ export function EnterpriseAiCaseStudy({
   const c = enterpriseAiPageContent
 
   return (
-    <CaseStudyShell backHref={backHref}>
+    <CaseStudyShell backHref={backHref} canvas="subtle">
       <div className="flex w-full flex-col gap-layout">
         <div className="flex flex-col gap-tight leading-normal">
           <h1 className="text-case-title font-semibold text-portfolio-black">

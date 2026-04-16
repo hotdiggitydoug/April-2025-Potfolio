@@ -1,9 +1,30 @@
 import { Card, CardContent } from '@/components/ui/card'
 import type { HomeProject } from '@/content/home'
 import { cn } from '@/lib/utils'
-import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+/** Lucide `arrow-right` paths — avoids `lucide-react` on `/` (same rationale as CaseStudyShell). */
+function CardCtaArrowIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width={16}
+      height={16}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  )
+}
 
 type ProjectCardProps = {
   project: HomeProject
@@ -29,7 +50,8 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       <Card
         className={cn(
           'h-full gap-section rounded-lg border border-solid border-border bg-card py-block shadow-none ring-0',
-          'transition-colors duration-300 ease-out motion-reduce:transition-none group-hover/card:bg-folio-100',
+          'transition-colors duration-300 ease-out motion-reduce:transition-none',
+          'group-hover/card:border-folio-900 group-hover/card:bg-card',
         )}
       >
         <CardContent className="flex flex-row items-start gap-section">
@@ -65,13 +87,15 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             <p className="w-full text-xl text-muted-foreground">
               {project.description}
             </p>
-            <span className="mt-sunk inline-flex items-center gap-tight text-base font-semibold text-muted-foreground">
+            <span
+              className={cn(
+                'mt-sunk inline-flex items-center gap-tight text-base font-semibold text-muted-foreground',
+                'transition-colors duration-300 ease-out motion-reduce:transition-none',
+                'group-hover/card:text-folio-900',
+              )}
+            >
               View Details
-              <ArrowRight
-                className="size-4 shrink-0 motion-reduce:animate-none group-hover/card:animate-card-cta-arrow"
-                strokeWidth={2}
-                aria-hidden
-              />
+              <CardCtaArrowIcon className="size-4 shrink-0 text-inherit motion-reduce:animate-none group-hover/card:animate-card-cta-arrow" />
             </span>
           </div>
         </CardContent>

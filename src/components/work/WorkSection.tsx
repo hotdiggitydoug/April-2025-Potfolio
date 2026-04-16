@@ -5,7 +5,7 @@ import { ProjectCard } from './ProjectCard'
 type WorkSectionProps = {
   sectionHeading: string
   confidentialityNote: string
-  employers: HomeEmployer[]
+  employers: readonly HomeEmployer[]
 }
 
 export function WorkSection({
@@ -24,13 +24,13 @@ export function WorkSection({
       <div className="flex w-full flex-col gap-tight">
         <h2
           id="work-heading"
-          className="text-base font-semibold uppercase tracking-wide text-portfolio-black"
+          className="text-xl font-semibold uppercase tracking-wide text-portfolio-black"
         >
           {sectionHeading}
         </h2>
         <p
           id="work-confidentiality-note"
-          className="w-full text-base font-normal italic leading-normal text-muted-foreground"
+          className="w-full text-xl font-normal italic leading-normal text-muted-foreground"
         >
           {confidentialityNote}
         </p>

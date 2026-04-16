@@ -24,9 +24,9 @@ export const enterpriseAiPageContent = {
       tagline:
         'Designed a district manager tool that improved visit prioritization and helped field leaders focus on the stores that needed the most support',
       bullets: [
-        'Built an end-to-end prototype for prioritizing store visits based on store performance signals',
-        'Defined decision logic and requirements with business and operations leaders',
-        'Partnered with engineering to align roadmap, feasibility, and rollout approach',
+        'Built an end-to-end prototype enabling store prioritization based on performance signals',
+        'Defined decision logic with business and operations leaders to guide where and when to act',
+        'Partnered with engineering to align on feasibility and rollout approach',
       ],
       iconSrc: '/icons/enterprise-ai/shopping-cart.svg',
     },
@@ -34,11 +34,11 @@ export const enterpriseAiPageContent = {
       id: 'global-agribusiness',
       industry: 'Global Agribusiness',
       tagline:
-        'Built an AI-powered merchandising assistant that helped buyers make faster, more informed soybean purchasing decisions.',
+        'Built an AI-powered merchandising assistant that helped buyers make faster, more informed soybean purchasing decisions',
       bullets: [
-        'Mapped merchandising workflows with purchasing and operations leaders',
-        'Designed and launched a live AI assistant with recommendations and chat support',
-        'Improved timing, pricing, and confidence in soybean purchasing decisions',
+        'Defined core purchasing workflows and decision points across merchandising and operations teams',
+        'Designed and launched an AI-powered assistant with recommendations and chat support',
+        'Iterated on interaction patterns to improve usability and drive adoption',
       ],
       iconSrc: '/icons/enterprise-ai/wheat.svg',
     },
@@ -48,9 +48,9 @@ export const enterpriseAiPageContent = {
       tagline:
         'Created an AI-enabled operational readiness prototype that helped leaders visualize future-state workflows',
       bullets: [
-        'Interviewed former armed service members to ground the experience in real-world operational decisions',
-        'Designed an end-to-end prototype spanning IT, maintenance, aviation, and supply chain workflows',
-        'Used the tool to align stakeholders around future-state capabilities and investment priorities',
+        'Synthesized insights from former service members to define real-world decision-making requirements',
+        'Designed an end-to-end prototype across IT, maintenance, aviation, and supply chain workflows',
+        'Used the prototype to drive alignment on future-state capabilities and investment priorities',
       ],
       iconSrc: '/icons/enterprise-ai/account-balance.svg',
     },
