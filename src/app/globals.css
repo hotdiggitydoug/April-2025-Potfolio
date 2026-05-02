@@ -43,9 +43,15 @@
 
   /* Primary UI: Lato (sans + heading — single stack) */
   --font-sans:
-    var(--font-lato), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    var(--font-lato), ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-heading: var(--font-sans);
+
+  /* Lato has 400 / 700; cap heavy utilities at bold so weights resolve to loaded faces */
+  --font-weight-semibold: 700;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 700;
+  --font-weight-black: 700;
 
   --color-folio-000: var(--folio-000);
   --color-folio-100: var(--folio-100);
@@ -266,6 +272,7 @@
   figcaption {
     @apply text-sm text-muted-foreground;
   }
+  b,
   strong {
     @apply font-semibold;
   }
