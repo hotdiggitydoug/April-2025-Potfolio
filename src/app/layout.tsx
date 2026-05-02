@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
-import { Inconsolata } from 'next/font/google'
+import { Lato } from 'next/font/google'
 
 import './globals.css'
 
-const inconsolata = Inconsolata({
+const lato = Lato({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-inconsolata',
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-lato',
   display: 'swap',
 })
 
@@ -21,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={inconsolata.variable}>
+    <html lang="en" className={lato.variable}>
       <body className="m-0">{children}</body>
     </html>
   )
