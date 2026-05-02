@@ -43,7 +43,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       className={cn(
         'group/card block rounded-lg no-underline outline-none',
         'text-inherit visited:text-inherit hover:no-underline',
-        'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-folio-200',
+        'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-folio-125',
         className
       )}
     >

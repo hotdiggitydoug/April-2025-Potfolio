@@ -55,6 +55,7 @@
 
   --color-folio-000: var(--folio-000);
   --color-folio-100: var(--folio-100);
+  --color-folio-125: var(--folio-125);
   /* Hairlines / default borders */
   --color-folio-150: var(--folio-150);
   --color-folio-200: var(--folio-200);
@@ -146,9 +147,11 @@
 :root {
   --folio-000: #ffffff;
   --folio-100: #f9fafb;
+  /* Page canvas: softer than folio-200; still separates from #fff cards at ≥3:1 with --folio-150 */
+  --folio-125: #f8f9fb;
   /*
-   * Hairline / default border. Tuned for WCAG 2.1 SC 1.4.11 (non-text): ≥3:1 vs
-   * adjacent #fff and #f3f4f6 (card edges on gray canvas). Lighter than folio-500.
+   * Hairline / default border. WCAG 2.1 SC 1.4.11 (non-text): ≥3:1 vs adjacent #fff
+   * and folio-125 / folio-200 canvases. Lighter than folio-500.
    */
   --folio-150: #868b93;
   --folio-200: #f3f4f6;

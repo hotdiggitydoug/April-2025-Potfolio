@@ -11,11 +11,11 @@ type PortfolioShellProps = {
 
 export function PortfolioShell({ sidebar, children }: PortfolioShellProps) {
   return (
-    <div className="box-border min-h-svh w-full bg-folio-200 lg:fixed lg:inset-0 lg:min-h-0 lg:overflow-hidden">
-      <aside className="box-border flex min-h-svh flex-col items-stretch border-r border-solid border-border bg-folio-200 p-layout lg:fixed lg:top-0 lg:bottom-0 lg:left-0 lg:z-20 lg:min-h-0 lg:w-1/3 lg:overflow-y-auto lg:overscroll-y-contain">
+    <div className="box-border min-h-svh w-full bg-folio-125 lg:fixed lg:inset-0 lg:min-h-0 lg:overflow-hidden">
+      <aside className="box-border flex min-h-svh flex-col items-stretch border-r border-solid border-border bg-folio-125 p-layout lg:fixed lg:top-0 lg:bottom-0 lg:left-0 lg:z-20 lg:min-h-0 lg:w-1/3 lg:overflow-y-auto lg:overscroll-y-contain">
         {sidebar}
       </aside>
-      <main className="flex min-h-0 flex-col gap-section bg-folio-200 p-layout lg:ml-[33.333333vw] lg:h-full lg:overflow-y-auto lg:overscroll-y-contain">
+      <main className="flex min-h-0 flex-col gap-section bg-folio-125 p-layout lg:ml-[33.333333vw] lg:h-full lg:overflow-y-auto lg:overscroll-y-contain">
         {children}
       </main>
     </div>
