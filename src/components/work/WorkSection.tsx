@@ -24,13 +24,13 @@ export function WorkSection({
       <div className="flex w-full flex-col gap-tight">
         <h2
           id="work-heading"
-          className="text-xl font-semibold uppercase tracking-wide text-portfolio-black"
+          className="text-sm font-medium tracking-label text-portfolio-black"
         >
           {sectionHeading}
         </h2>
         <p
           id="work-confidentiality-note"
-          className="w-full text-xl font-normal italic leading-normal text-muted-foreground"
+          className="w-full text-sm font-normal italic leading-snug text-muted-foreground"
         >
           {confidentialityNote}
         </p>

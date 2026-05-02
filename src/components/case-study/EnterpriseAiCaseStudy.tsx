@@ -14,7 +14,7 @@ type EnterpriseAiCaseStudyProps = {
 
 function FeaturedCard({ card }: { card: EnterpriseAiFeaturedCard }) {
   return (
-    <article className="flex min-h-0 flex-1 flex-col gap-5 rounded-lg border border-border bg-folio-000 p-6">
+    <article className="flex min-h-0 flex-1 flex-col gap-5 rounded-xl border border-border bg-card p-6">
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-3">
           <img
@@ -25,7 +25,7 @@ function FeaturedCard({ card }: { card: EnterpriseAiFeaturedCard }) {
             className="size-9 shrink-0"
             aria-hidden
           />
-          <h3 className="text-base font-semibold text-portfolio-black">
+          <h3 className="text-sm font-medium tracking-label text-portfolio-black">
             {card.industry}
           </h3>
         </div>
@@ -45,7 +45,7 @@ function ContributionsTable({ rows }: { rows: readonly EnterpriseAiContributionR
     <div className="w-full overflow-x-auto">
       <table className="w-full min-w-[48rem] border-collapse text-left">
         <thead>
-          <tr className="border-b border-cream-900">
+          <tr className="border-b border-border">
             {(['Industry', 'Focus', 'Contribution', 'Projected Outcome'] as const).map(
               (label) => (
                 <th
@@ -64,7 +64,7 @@ function ContributionsTable({ rows }: { rows: readonly EnterpriseAiContributionR
             <tr
               key={row.id}
               className={cn(
-                'border-b border-cream-900 text-base text-muted-foreground',
+                'border-b border-border text-base text-muted-foreground',
                 index === rows.length - 1 && 'border-b-0',
               )}
             >
@@ -97,16 +97,18 @@ export function EnterpriseAiCaseStudy({
           <h1 className="text-case-title font-semibold text-portfolio-black">
             {study.title}
           </h1>
-          <p className="text-2xl text-muted-foreground">{study.subtitle}</p>
+          <p className="text-lg font-light leading-snug text-muted-foreground">
+            {study.subtitle}
+          </p>
         </div>
 
-        <div className="h-px w-full shrink-0 bg-cream-900" aria-hidden />
+        <div className="h-px w-full shrink-0 bg-border" aria-hidden />
 
         <section className="flex flex-col gap-6">
-          <h2 className="text-2xl font-semibold text-portfolio-black">
+          <h2 className="text-sm font-medium tracking-label text-portfolio-black">
             {c.featuredHeading}
           </h2>
-          <div className="flex flex-col gap-section lg:flex-row lg:items-stretch lg:gap-8">
+          <div className="flex flex-col gap-section lg:flex-row lg:items-stretch lg:gap-loft">
             {c.featuredCards.map((card) => (
               <FeaturedCard key={card.id} card={card} />
             ))}
@@ -114,7 +116,7 @@ export function EnterpriseAiCaseStudy({
         </section>
 
         <section className="flex flex-col gap-6">
-          <h2 className="text-2xl font-semibold text-portfolio-black">
+          <h2 className="text-sm font-medium tracking-label text-portfolio-black">
             {c.contributionsHeading}
           </h2>
           <ContributionsTable rows={c.contributionRows} />

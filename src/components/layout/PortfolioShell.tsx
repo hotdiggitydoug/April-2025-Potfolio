@@ -12,7 +12,7 @@ type PortfolioShellProps = {
 export function PortfolioShell({ sidebar, children }: PortfolioShellProps) {
   return (
     <div className="box-border min-h-svh w-full bg-folio-125 lg:fixed lg:inset-0 lg:min-h-0 lg:overflow-hidden">
-      <aside className="box-border flex min-h-svh flex-col items-stretch border-r border-solid border-border bg-folio-125 p-layout lg:fixed lg:top-0 lg:bottom-0 lg:left-0 lg:z-20 lg:min-h-0 lg:w-1/3 lg:overflow-y-auto lg:overscroll-y-contain">
+      <aside className="box-border flex min-h-svh flex-col items-stretch border-r border-solid border-border bg-folio-100 p-layout lg:fixed lg:top-0 lg:bottom-0 lg:left-0 lg:z-20 lg:min-h-0 lg:w-1/3 lg:overflow-y-auto lg:overscroll-y-contain">
         {sidebar}
       </aside>
       <main className="flex min-h-0 flex-col gap-section bg-folio-125 p-layout lg:ml-[33.333333vw] lg:h-full lg:overflow-y-auto lg:overscroll-y-contain">
@@ -32,16 +32,18 @@ export function SidebarIdentity({
   linkedIn,
 }: HomeIdentity) {
   return (
-    <div className="flex min-h-0 w-full flex-1 flex-col justify-between gap-0">
+    <div className="flex min-h-0 w-full flex-1 flex-col justify-between gap-loft">
       <header className="flex shrink-0 flex-col gap-tight">
-        <p className="text-xl font-semibold uppercase tracking-wide text-portfolio-black">
+        <p className="text-xl font-bold tracking-tight text-portfolio-black">
           {name}
         </p>
-        <p className="text-xl font-semibold text-muted-foreground">{title}</p>
+        <p className="text-lg font-light leading-snug text-muted-foreground">
+          {title}
+        </p>
       </header>
       <div className="flex shrink-0 flex-col gap-section">
         <section className="flex flex-col gap-tight">
-          <h2 className="text-xl font-semibold uppercase tracking-wide text-portfolio-black">
+          <h2 className="text-sm font-medium tracking-label text-portfolio-black">
             {aboutHeading}
           </h2>
           <div className="flex flex-col gap-tight">
@@ -51,7 +53,7 @@ export function SidebarIdentity({
               .map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-xl font-normal leading-normal text-muted-foreground"
+                  className="text-base font-normal leading-relaxed text-muted-foreground"
                 >
                   {paragraph.trim()}
                 </p>
@@ -66,7 +68,7 @@ export function SidebarIdentity({
             href={email.href}
             className={cn(
               buttonVariants({ variant: 'secondary' }),
-              'h-auto rounded-lg border border-solid border-border px-4 py-2 text-base font-semibold transition-colors duration-300 ease-out motion-reduce:transition-none hover:border-folio-900 hover:bg-card hover:text-folio-900',
+              'h-auto rounded-lg border border-solid border-border px-4 py-2 text-base font-medium transition-[color,box-shadow,border-color] duration-300 ease-out motion-reduce:transition-none hover:border-folio-700 hover:bg-card hover:shadow-sm hover:text-folio-900',
             )}
           >
             {email.label}
@@ -75,7 +77,7 @@ export function SidebarIdentity({
             href={linkedIn.href}
             className={cn(
               buttonVariants({ variant: 'secondary' }),
-              'h-auto rounded-lg border border-solid border-border px-4 py-2 text-base font-semibold transition-colors duration-300 ease-out motion-reduce:transition-none hover:border-folio-900 hover:bg-card hover:text-folio-900',
+              'h-auto rounded-lg border border-solid border-border px-4 py-2 text-base font-medium transition-[color,box-shadow,border-color] duration-300 ease-out motion-reduce:transition-none hover:border-folio-700 hover:bg-card hover:shadow-sm hover:text-folio-900',
             )}
             target="_blank"
             rel="noreferrer"

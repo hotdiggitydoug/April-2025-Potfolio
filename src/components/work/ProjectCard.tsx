@@ -41,7 +41,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       href={project.detailsHref}
       aria-label={`${project.title} — view details`}
       className={cn(
-        'group/card block rounded-lg no-underline outline-none',
+        'group/card block rounded-xl no-underline outline-none',
         'text-inherit visited:text-inherit hover:no-underline',
         'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-folio-125',
         className
@@ -49,15 +49,15 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
     >
       <Card
         className={cn(
-          'h-full gap-section rounded-lg border border-solid border-border bg-card py-block shadow-none ring-0',
-          'transition-colors duration-300 ease-out motion-reduce:transition-none',
-          'group-hover/card:border-folio-900 group-hover/card:bg-card',
+          'h-full gap-section rounded-xl border border-solid border-border bg-card py-block shadow-none ring-0',
+          'transition-[border-color,box-shadow] duration-300 ease-out motion-reduce:transition-none',
+          'group-hover/card:border-folio-700 group-hover/card:bg-card group-hover/card:shadow-sm',
         )}
       >
         <CardContent className="flex flex-row items-start gap-section">
           <div
             className={cn(
-              'size-10 shrink-0 overflow-hidden rounded-lg',
+              'size-10 shrink-0 overflow-hidden rounded-md',
               'transition-[width,height] duration-300 ease-out motion-reduce:transition-none',
               'group-hover/card:size-11',
               project.imageThumbTileClassName,
@@ -81,15 +81,15 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             />
           </div>
           <div className="flex min-w-0 flex-1 flex-col items-start gap-tight text-left">
-            <p className="w-full text-xl font-semibold text-card-foreground">
+            <p className="w-full text-lg font-semibold text-card-foreground">
               {project.title}
             </p>
-            <p className="w-full text-xl text-muted-foreground">
+            <p className="w-full text-base leading-relaxed text-muted-foreground">
               {project.description}
             </p>
             <span
               className={cn(
-                'mt-sunk inline-flex items-center gap-tight text-base font-semibold text-muted-foreground',
+                'mt-sunk inline-flex items-center gap-tight text-sm font-medium text-muted-foreground',
                 'transition-colors duration-300 ease-out motion-reduce:transition-none',
                 'group-hover/card:text-folio-900',
               )}

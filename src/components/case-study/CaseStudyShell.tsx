@@ -49,7 +49,7 @@ export function CaseStudyShell({
           <Link
             href={backHref}
             className={cn(
-              'group inline-flex w-fit items-center gap-tight text-base font-semibold text-portfolio-black no-underline transition-colors duration-200 ease-out visited:text-portfolio-black hover:text-folio-500 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+              'group inline-flex w-fit items-center gap-tight text-base font-medium text-portfolio-black no-underline transition-colors duration-300 ease-out visited:text-portfolio-black hover:text-folio-500 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
               canvas === 'subtle'
                 ? 'focus-visible:ring-offset-folio-100'
                 : 'focus-visible:ring-offset-background',

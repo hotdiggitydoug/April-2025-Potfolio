@@ -38,11 +38,13 @@ export function CaseStudyTemplate({
           <h1 className="text-case-title font-semibold text-portfolio-black">
             {study.title}
           </h1>
-          <p className="text-2xl text-muted-foreground">{study.subtitle}</p>
+          <p className="text-lg font-light leading-snug text-muted-foreground">
+            {study.subtitle}
+          </p>
         </div>
 
         <figure
-          className="relative w-full shrink-0 overflow-hidden rounded-2xl bg-cream-500"
+          className="relative w-full shrink-0 overflow-hidden rounded-xl bg-cream-500"
           style={{
             aspectRatio: `${study.heroImage.width} / ${study.heroImage.height}`,
           }}
@@ -58,30 +60,30 @@ export function CaseStudyTemplate({
           />
         </figure>
 
-        <div className="grid w-full grid-cols-1 gap-section leading-normal lg:grid-cols-2 lg:gap-20">
+        <div className="grid w-full grid-cols-1 gap-section leading-normal lg:grid-cols-2 lg:gap-grid-split">
           <div className="flex min-w-0 flex-col gap-section">
             <section className="flex flex-col gap-tight">
-              <h2 className="text-xl font-semibold text-portfolio-black">
+              <h2 className="text-sm font-medium tracking-label text-portfolio-black">
                 Context
               </h2>
-              <p className="text-xl font-normal text-muted-foreground">
+              <p className="text-base font-normal leading-relaxed text-muted-foreground">
                 {study.context}
               </p>
             </section>
             <section className="flex flex-col gap-tight">
-              <h2 className="text-xl font-semibold text-portfolio-black">
+              <h2 className="text-sm font-medium tracking-label text-portfolio-black">
                 Impact
               </h2>
-              <p className="text-xl font-normal text-muted-foreground">
+              <p className="text-base font-normal leading-relaxed text-muted-foreground">
                 {study.impact}
               </p>
             </section>
           </div>
           <section className="flex min-w-0 flex-col gap-cta-gap">
-            <h2 className="text-xl font-semibold text-portfolio-black">
+            <h2 className="text-sm font-medium tracking-label text-portfolio-black">
               Project Highlights
             </h2>
-            <ul className="list-disc space-y-tight pl-8 text-xl font-normal text-muted-foreground marker:text-muted-foreground">
+            <ul className="list-disc space-y-tight pl-8 text-base font-normal leading-relaxed text-muted-foreground marker:text-muted-foreground">
               {study.highlights.map((item, index) => (
                 <li key={index} className="leading-normal">
                   <span>{item}</span>
